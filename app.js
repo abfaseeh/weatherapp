@@ -20,8 +20,8 @@ button.addEventListener('click', function (name) {
 
 
         main.innerHTML = nameValue;
-        desc.innerHTML = "Desc - " + descValue;
-        temp.innerHTML = "Temp - " + tempValue + " C";
+        desc.innerHTML = "Description - " + descValue;
+        temp.innerHTML = "Temperature - " + tempValue + " C";
         clouds.innerHTML = "Clouds - " + cloudsValue;
         input.value = "";
         // console.log(data);
