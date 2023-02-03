@@ -1,1 +1,1 @@
-var input = document.querySelector("city_name")
+var input = document.querySelector(".city_name");
