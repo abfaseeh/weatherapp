@@ -1,6 +1,6 @@
 var input = document.querySelector(".input_text");
 var main = document.querySelector("#name");
-var temo = document.querySelector(".temp");
+var temp = document.querySelector(".temp");
 var desc = document.querySelector(".desc");
 var clouds = document.querySelector(".clouds");
 var button = document.querySelector(".submit");
@@ -9,12 +9,23 @@ button.addEventListener('click', function (name) {
     fetch(
         "https://api.openweathermap.org/data/2.5/weather?q=" +
         input.value
-        +"&appid=1122ad858ba96f4afcc702029e09cc0c"
+        +"&units=metric&appid=1122ad858ba96f4afcc702029e09cc0c"
     )
-    .then("")
     .then((Response) => Response.json())
     .then((data) => {
-        console.log(data);
-    });
+        var tempValue = data['main']['temp'];
+        var nameValue = data['name'];
+        var descValue = data['weather'][0]['description'];
+        var cloudsValue = data['clouds']['all'];
+
+
+        main.innerHTML = nameValue;
+        desc.innerHTML = "Desc - " + descValue;
+        temp.innerHTML = "Temp - " + tempValue;
+        clouds.innerHTML = "Clouds - " + cloudsValue;
+        input.value = "";
+        // console.log(data);
+    })
+    .catch((err) => alert("Wrong City Name!"));
     // alert(input.value);
 });
