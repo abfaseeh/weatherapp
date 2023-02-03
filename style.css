@@ -47,8 +47,10 @@ input[type="submit"]:hover {
     background: #e7e7e7;
     height: 35vh;
     margin: 50px auto;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 20px 0;
+    background-image: url("https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/draw1.webp");
+    background-size: contain;
 }
 
 .card h1{
@@ -59,6 +61,9 @@ input[type="submit"]:hover {
 .card p{
     text-align: center;
     margin: 40px 0;
-    font-size: 20ox;
+    font-size: 20px;
 }
 
+.container{
+    border-radius: 5px;
+}
